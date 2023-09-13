@@ -1,0 +1,130 @@
+// C# Coding Cheat Sheet
+
+// Hello World Program
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+
+// Variables and Data Types
+int age = 30;
+double price = 19.99;
+string name = "John";
+bool isStudent = true;
+
+// Basic Input/Output
+Console.WriteLine("Enter your name:");
+string input = Console.ReadLine();
+Console.WriteLine($"Hello, {input}");
+
+// Conditional Statements
+if (age >= 18)
+{
+    Console.WriteLine("You are an adult.");
+}
+else
+{
+    Console.WriteLine("You are a minor.");
+}
+
+// Loops
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+while (condition)
+{
+    // Code to repeat
+}
+
+// Arrays
+int[] numbers = { 1, 2, 3, 4, 5 };
+string[] names = new string[3];
+
+// Functions
+int Add(int a, int b)
+{
+    return a + b;
+}
+
+// Classes and Objects
+class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void SayHello()
+    {
+        Console.WriteLine($"Hello, my name is {Name}.");
+    }
+}
+
+Person person1 = new Person();
+person1.Name = "Alice";
+person1.Age = 25;
+
+// Inheritance
+class Student : Person
+{
+    public int StudentID { get; set; }
+}
+
+// Exception Handling
+try
+{
+    // Code that might throw an exception
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"An error occurred: {ex.Message}");
+}
+
+// Namespaces
+using System; // Importing a namespace
+
+// File I/O
+using System.IO;
+
+// Example of reading from a file
+string filePath = "example.txt";
+string content = File.ReadAllText(filePath);
+
+// Comments
+// This is a single-line comment
+
+/*
+This is a
+multi-line
+comment
+*/
+
+// Lambda Expressions
+Func<int, int, int> addFunc = (x, y) => x + y;
+
+// LINQ (Language Integrated Query)
+var result = from num in numbers
+             where num % 2 == 0
+             select num;
+
+// Delegates and Events
+delegate void MyDelegate(string message);
+event MyDelegate MyEvent;
+
+// Asynchronous Programming
+async Task MyMethodAsync()
+{
+    // Asynchronous code here
+}
+
+// Attributes
+[Serializable]
+public class MyClass
+{
+    // Class members here
+}
